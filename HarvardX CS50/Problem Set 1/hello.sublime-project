@@ -1,0 +1,16 @@
+{
+	"build_systems":
+	[
+		{
+			"file_regex": "(.+[^:]):(\\d+):(\\d+): (?:fatal )?((?:error|warning): .+)$",
+			"name": "hello",
+			"shell_cmd": "cmake hello.c",
+			"working_dir": "${project_path}"
+		},
+                {
+                        "name": "run the executable",
+                        "shell_cmd": "./hello",
+                        "working_dir": "${project_path}"
+                }
+	]
+}
